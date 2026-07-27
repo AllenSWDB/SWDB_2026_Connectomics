@@ -1,6 +1,6 @@
 {
 	"version": 1,
-	"base_image": "codeocean/mambaforge3:24.5.0-0-python3.12.4-ubuntu22.04",
+	"base_image": "codeocean/py-r:python3.12.4-R4.4.2-1.2204.0-JupyterLab4.3.0-RStudiorstudio-server-2024.09.0-375-ubuntu22.04",
 	"options": {
 		"registry_host_arg": true,
 		"git_ask_pass": true,
