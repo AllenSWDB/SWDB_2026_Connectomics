@@ -14,7 +14,8 @@
 					"version": "8.2.1"
 				},
 				{
-					"name": "cloud-volume"
+					"name": "cloud-volume",
+					"version": "12.14.2"
 				},
 				{
 					"name": "hdmf",
