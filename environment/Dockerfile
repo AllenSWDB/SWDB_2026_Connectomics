@@ -1,6 +1,6 @@
-# hash:sha256:c10c312dac42e6d243a952d5c5482c494126cf6ccdf022d1b508a6b4a967cc6a
+# hash:sha256:73d1c8661ba989cf6d680f1e660fbb5348889ee7c9d33ea475414770dd59783e
 ARG REGISTRY_HOST
-FROM $REGISTRY_HOST/codeocean/py-r:python3.12.4-R4.4.2-1.2204.0-JupyterLab4.3.0-RStudiorstudio-server-2024.09.0-375-ubuntu22.04
+FROM $REGISTRY_HOST/codeocean/code-server-python-extensions-pack:code-server4.129.0python3.12.4codeocean-mcp-serveruvpyreflyetc
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG GIT_ASKPASS
