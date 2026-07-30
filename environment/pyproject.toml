@@ -5,6 +5,7 @@ dependencies = [
     "hdmf==6.1.0",
     "hdmf-zarr==0.13.0",
     "ipykernel>=7.3.0",
+    "jupyterlab>=4.6.2",
     "matplotlib==3.11.1",
     "nwbwidgets==0.11.3",
     "ossify==0.2.4",
