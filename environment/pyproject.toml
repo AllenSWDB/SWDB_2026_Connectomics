@@ -13,6 +13,7 @@ dependencies = [
     "scipy==1.18.0",
     "seaborn==0.13.2",
     "standard-transform==2.0.0",
+    "connects-common-connectivity",
 ]
 description = "SWDB 2026 Connectomics"
 name = "swdb-2026-connectomics"
@@ -22,3 +23,6 @@ version = "0.1.0"
 
 [tool.uv]
 exclude-newer = "2026-07-30T00:00:00Z"
+
+[tool.uv.sources]
+connects-common-connectivity = { git = "https://github.com/AllenInstitute/ConnectsCommonConnectivity.git", branch = "v1dd-ingest" }
