@@ -8,3 +8,12 @@ COPY git-ask-pass /
 
 COPY pyproject.toml /tmp/pyproject.toml
 RUN uv pip install --system --no-cache -r /tmp/pyproject.toml
+
+# ── LLM Copilot CLI──────────────────────
+# Install Node.js (needed for copilot CLI)
+RUN conda install -y nodejs -c conda-forge \
+    && conda clean -ya
+
+# Install GitHub Copilot CLI globally (no auth needed for install)
+RUN npm install -g @github/copilot
+#──────────────────────
