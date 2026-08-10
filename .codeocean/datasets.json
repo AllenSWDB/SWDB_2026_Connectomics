@@ -10,6 +10,10 @@
 			"mount": "409828_V1DD_Filtered"
 		},
 		{
+			"id": "98e02953-4773-44fb-a319-32c387984ed1",
+			"mount": "v1dd_1196_coreg_functional_correlation"
+		},
+		{
 			"id": "aafc99cc-92ee-4d04-b152-92f1063a3268",
 			"mount": "v1dd_1196"
 		}
