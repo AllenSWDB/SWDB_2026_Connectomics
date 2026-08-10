@@ -2,16 +2,16 @@
 	"version": 1,
 	"attached_datasets": [
 		{
-			"id": "039d9bd7-6f02-42f3-942b-35cbdfd60e81",
-			"mount": "v1dd_1196_ccm20260809"
+			"id": "505aafa4-a6a9-43e0-a68c-245c41e508b6",
+			"mount": "v1dd_1196_ccm20260727"
+		},
+		{
+			"id": "5536542a-5079-470a-a61b-1ed149650612",
+			"mount": "v1dd_1196_20260809"
 		},
 		{
 			"id": "8a5371f5-e2f1-4072-9c07-075b3fae4d13",
 			"mount": "409828_V1DD_Filtered"
-		},
-		{
-			"id": "98e02953-4773-44fb-a319-32c387984ed1",
-			"mount": "v1dd_1196_coreg_functional_correlation"
 		},
 		{
 			"id": "aafc99cc-92ee-4d04-b152-92f1063a3268",
