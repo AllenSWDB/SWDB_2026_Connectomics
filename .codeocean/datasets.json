@@ -6,6 +6,10 @@
 			"mount": "v1dd_1196_ccm"
 		},
 		{
+			"id": "4c3a2e8c-7b1c-421c-a4bf-5930806f3e67",
+			"mount": "409828_V1DD_stimulus_metrics"
+		},
+		{
 			"id": "8a5371f5-e2f1-4072-9c07-075b3fae4d13",
 			"mount": "409828_V1DD_Filtered"
 		},
