@@ -2,20 +2,20 @@
 	"version": 1,
 	"attached_datasets": [
 		{
-			"id": "34c7b535-b129-4246-b7ec-deaa86a8a76c",
+			"id": "239ef406-3023-4358-940e-d68864813f48",
 			"mount": "v1dd_1196_ccm"
+		},
+		{
+			"id": "4c3a2e8c-7b1c-421c-a4bf-5930806f3e67",
+			"mount": "409828_V1DD_stimulus_metrics"
 		},
 		{
 			"id": "8a5371f5-e2f1-4072-9c07-075b3fae4d13",
 			"mount": "409828_V1DD_Filtered"
 		},
 		{
-			"id": "98e02953-4773-44fb-a319-32c387984ed1",
+			"id": "dcaca6b2-2256-4e56-af98-8671d71109f6",
 			"mount": "v1dd_1196_coreg_functional_correlation"
-		},
-		{
-			"id": "aafc99cc-92ee-4d04-b152-92f1063a3268",
-			"mount": "v1dd_1196"
 		}
 	]
 }
