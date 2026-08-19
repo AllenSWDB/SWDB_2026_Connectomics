@@ -629,3 +629,46 @@ def filter_synapse_table(
         post_mask = np.ones(len(synapse_table), dtype=bool)
 
     return synapse_table[pre_mask & post_mask]
+
+
+def make_adjacency(
+    synapses,
+    source_cell_index: Union[pd.Index, pd.DataFrame, pd.Series, np.ndarray, list],
+    target_cell_index: Optional[
+        Union[pd.Index, pd.DataFrame, pd.Series, np.ndarray, list]
+    ] = None,
+    aggfunc="binary",
+    return_as="dense",
+) -> Union[csr_array, np.ndarray]:
+    source_cell_index = check_index(source_cell_index)
+    if target_cell_index is None:
+        target_cell_index = source_cell_index
+    else:
+        target_cell_index = check_index(target_cell_index)
+    synapses = synapses.query(
+        "pre_pt_root_id in @source_cell_index and post_pt_root_id in @target_cell_index"
+    )
+    groupby = synapses.groupby(["pre_pt_root_id", "post_pt_root_id"])
+    if aggfunc == "count":
+        edges = groupby.size().rename("weight").reset_index()
+    elif aggfunc == "binary":
+        edges = groupby.size().transform(lambda x: x > 0).rename("weight").reset_index()
+    else:
+        edges = groupby["size"].agg(aggfunc).rename("weight").reset_index()
+    # make sure that the adjacency matrix is sorted the same as the input cell index
+    edges["source_index"] = source_cell_index.get_indexer(edges["pre_pt_root_id"])
+    edges["target_index"] = target_cell_index.get_indexer(edges["post_pt_root_id"])
+    adjacency = csr_array(
+        (edges["weight"], (edges["source_index"], edges["target_index"])),
+        shape=(len(source_cell_index), len(target_cell_index)),
+        dtype=edges["weight"].dtype,
+    )
+    # NOTE: for many applications working with sparse matrices is more efficient
+    # but for ease of use and visualization in this workshop we return a dense matrix
+    if return_as == "dense":
+        adjacency = adjacency.todense()
+    elif return_as == "sparse":
+        pass  # already in sparse format
+    else:
+        raise ValueError(f"Unknown return_as type: {return_as}")
+    return adjacency
